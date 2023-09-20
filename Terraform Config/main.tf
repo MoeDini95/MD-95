@@ -22,18 +22,18 @@ resource "aws_s3_bucket" "bucket" {
 # Upload website files to S3: 
 resource "aws_s3_object" "html" {
   bucket = "mdresume.com"
-  for_each = fileset("/Users/dini/Resume/MD-95","*")
+  for_each = fileset("/Users/dini/MD-95","*")
   key = "index.html"
-  source = "/Users/dini/Resume/MD-95/index.html"
+  source = "/Users/dini/MD-95/Frontend/index.html"
   content_type = "text/html"
   
 }
 
 resource "aws_s3_object" "css" {
   bucket = "mdresume.com"
-  for_each = fileset("/Users/dini/Resume/MD-95","*")
+  for_each = fileset("/Users/dini/MD-95","*")
   key = "style.css"
-  source = "/Users/dini/Resume/MD-95/index.css"
+  source = "/Users/dini/MD-95/Frontend/style.css"
   content_type = "text/css"
   
 }

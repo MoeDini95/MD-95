@@ -33,7 +33,7 @@ resource "aws_s3_object" "css" {
   bucket = "mdresume.com"
   for_each = fileset("/Users/dini/Resume/MD-95","*")
   key = "style.css"
-  source = "/Users/dini/Resume/MD-95/style.css"
+  source = "/Users/dini/Resume/MD-95/index.css"
   content_type = "text/css"
   
 }

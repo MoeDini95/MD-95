@@ -38,6 +38,15 @@ resource "aws_s3_object" "css" {
   
 }
 
+resource "aws_s3_object" "js" {
+  bucket = "mdresume.com"
+  for_each = fileset("/Users/dini/MD-95","*")
+  key = "index.js"
+  source = "/Users/dini/MD-95/Frontend/index.js"
+  content_type = "text/js"
+  
+}
+
 resource "aws_s3_bucket_public_access_block" "bucket" {
   bucket = "mdresume.com"
 

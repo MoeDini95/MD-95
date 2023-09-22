@@ -42,7 +42,7 @@ resource "aws_s3_object" "css" {
 resource "aws_s3_object" "html" {
   bucket = "mdresume.com"
   for_each = fileset("/Users/dini/MD-95","*")
-  key = "index.html"
+  key = "reset-fonts-grids.css"
   source = "/Users/dini/MD-95/Frontend/reset-fonts-grids.css"
   content_type = "text/css"
   

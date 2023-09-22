@@ -39,7 +39,7 @@ resource "aws_s3_object" "css" {
 }
 
 # Upload website files to S3: 
-resource "aws_s3_object" "html" {
+resource "aws_s3_object" "fonts" {
   bucket = "mdresume.com"
   for_each = fileset("/Users/dini/MD-95","*")
   key = "reset-fonts-grids.css"

@@ -4,6 +4,6 @@ Cloud Resume Project Architectural Diagram
 
 
 
-Code from website [MD-95.com](https://md-95.com)
+Link to the website! [MD-95.com](https://md-95.com)
 
 
